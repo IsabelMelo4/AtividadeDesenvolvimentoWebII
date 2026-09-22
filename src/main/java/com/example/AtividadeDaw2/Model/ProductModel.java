@@ -10,10 +10,12 @@ import lombok.NoArgsConstructor;
 @Table(name = "products")
 
 public class ProductModel {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+    private int id_category;
     private String name;
-     private float price;
+    private float price;
     private int quant;
     private boolean disponivel;
 
@@ -22,6 +24,7 @@ public class ProductModel {
         this.price = dto.quant();
         this.quant = dto.quant();
         this.disponivel = dto.disponivel();
+        this.id_category = dto.idcategory();
     }
 
     public String getName() {
@@ -67,6 +70,15 @@ public class ProductModel {
 
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+
+    public int getId_category() {
+        return id_category;
+    }
+
+    public void setId_category(int id_category) {
+        this.id_category = id_category;
     }
 }
 
