@@ -12,6 +12,7 @@ import org.hibernate.annotations.IdGeneratorType;
 @Table(name = "Category")
 public class CategoryModel {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String category;
 
     public CategoryModel(DtoCreateCategory dto) {
@@ -22,7 +23,7 @@ public class CategoryModel {
         return category;
     }
 
-    public void setName(String name) {
+    public void setCategory(String name) {
         this.category = name;
     }
 }

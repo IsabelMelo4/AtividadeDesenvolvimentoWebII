@@ -13,10 +13,10 @@ public class ProductModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    private int id_category;
+    private Integer id_category;
     private String name;
     private float price;
-    private int quant;
+    private Integer quant;
     private boolean disponivel;
 
     public ProductModel(DtoCreateProduct dto) {
@@ -24,7 +24,7 @@ public class ProductModel {
         this.price = dto.quant();
         this.quant = dto.quant();
         this.disponivel = dto.disponivel();
-        this.id_category = dto.idcategory();
+        this.id_category = dto.id_category();
     }
 
     public String getName() {
@@ -56,11 +56,11 @@ public class ProductModel {
         this.disponivel = diponivel;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -73,11 +73,11 @@ public class ProductModel {
     }
 
 
-    public int getId_category() {
+    public Integer getId_category() {
         return id_category;
     }
 
-    public void setId_category(int id_category) {
+    public void setId_category(Integer id_category) {
         this.id_category = id_category;
     }
 }

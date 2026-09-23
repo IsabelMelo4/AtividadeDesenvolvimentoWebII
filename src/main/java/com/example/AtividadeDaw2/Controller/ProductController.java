@@ -39,7 +39,6 @@ public class ProductController {
     product.setPrice(productModel.getPrice());
     product.setQuant(productModel.getQuant());
     product.setDisponivel(productModel.isDisponivel());
-
     return productRepository.save(product);
 
 
